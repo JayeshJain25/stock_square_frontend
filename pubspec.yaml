@@ -1,0 +1,38 @@
+name: stock_square_app
+description: A new Flutter project.
+
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.1 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  google_fonts: ^2.1.0
+  auto_size_text: ^3.0.0-nullsafety.0
+  provider: ^6.0.0
+  cached_network_image: ^3.1.0
+  sizer: ^2.0.13
+  webview_flutter: ^2.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^1.0.0
+
+flutter:
+
+ 
+  uses-material-design: true
+
+
+  assets:
+    - assets/
