@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
@@ -7,14 +8,14 @@ import 'package:stock_square_app/news_web_view.dart';
 
 import 'news_provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class IPOScreen extends StatefulWidget {
+  const IPOScreen({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<IPOScreen> createState() => _IPOScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _IPOScreenState extends State<IPOScreen> {
   late int page = 0;
 
   @override

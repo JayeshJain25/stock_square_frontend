@@ -24,8 +24,11 @@ class _NewsWebViewState extends State<NewsWebView> {
           automaticallyImplyLeading: false,
           backgroundColor: Colors.black,
           title: Text(
-            "News",
-            style: GoogleFonts.rubik(color: Colors.white, fontSize: 18),
+            "StockSquare",
+            style: GoogleFonts.rubik(
+              color: const Color(0xFF0892D0),
+              fontSize: 25,
+            ),
           ),
         ),
       ),

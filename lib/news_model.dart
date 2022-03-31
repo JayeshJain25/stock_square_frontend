@@ -6,6 +6,7 @@ class NewsModel {
   final String publishedDate;
   final String url;
   final String photoUrl;
+  final String tag;
 
   const NewsModel({
     required this.title,
@@ -15,6 +16,7 @@ class NewsModel {
     required this.publishedDate,
     required this.url,
     required this.photoUrl,
+    required this.tag,
   });
 
   factory NewsModel.fromJson(Map<String, dynamic> json) {
@@ -34,6 +36,7 @@ class NewsModel {
       publishedDate: json['publishedDate'] as String,
       url: json['url'] as String,
       photoUrl: newPhotoUrl,
+      tag: json['tag'] as String,
     );
   }
   Map<String, dynamic> toJson() => {
@@ -44,5 +47,6 @@ class NewsModel {
         'publishedDate': publishedDate,
         'url': url,
         'photoUrl': photoUrl,
+        'tag': tag,
       };
 }

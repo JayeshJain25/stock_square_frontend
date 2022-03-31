@@ -18,8 +18,9 @@ class NewsProvider with ChangeNotifier {
     newsCompleteList = list;
   }
 
-  Future<void> getNewsFeed() async {
-    const url = "http://8f4a-49-36-111-77.in.ngrok.io/news/news";
+  Future<void> getNewsFeed(String tag) async {
+    newsCompleteList.clear();
+    String url = "http://fe0b-49-36-105-146.in.ngrok.io/news/news?tag=$tag";
     try {
       final response = await http.get(
         Uri.parse(url),

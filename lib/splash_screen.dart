@@ -1,7 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
 import 'package:stock_square_app/home_screen.dart';
+
+import 'bottom_navigation_bar.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -24,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen>
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(
-        builder: (context) => const HomeScreen(),
+        builder: (context) => const AppBottomNavigationBar(),
       ),
     );
   }
@@ -60,11 +64,16 @@ class _SplashScreenState extends State<SplashScreen>
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SizedBox(
+            width: 450,
+            height: 300,
+            child: SizedBox(
               width: 450,
               height: 300,
               child: Image.asset(
                 "assets/logos2.jpg",
-              )),
+              ),
+            ),
+          )
         ],
       ),
     );

@@ -1,26 +1,26 @@
+import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:stock_square_app/news_web_view.dart';
 
 import 'news_provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
-
+class MarketScreen extends StatefulWidget {
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  _MarketScreenState createState() => _MarketScreenState();
+
+  const MarketScreen({Key? key}) : super(key: key);
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _MarketScreenState extends State<MarketScreen> {
   late int page = 0;
 
   @override
   void initState() {
     super.initState();
-    Provider.of<NewsProvider>(context, listen: false).getNewsFeed("ipo");
+    Provider.of<NewsProvider>(context, listen: false).getNewsFeed("market");
   }
 
   double getDescriptionLength(int lengthOfDesc) {
@@ -201,4 +201,5 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
 }
